@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mood Tracker</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background: #f4f4f9;">
+
+  <!-- Header -->
+  <h1 style="margin: 0; padding: 20px; background: #333; color: white;">
+    🎭 Daily Mood Tracker
+  </h1>
+
+  <!-- Mood Selector -->
+  <p style="margin: 30px 0; font-size: 20px; font-weight: bold;">How are you feeling today?</p>
+  
+  <button onclick="setMood('😊', '#ffe066', 'Happy vibes! Keep smiling!')" style="padding: 15px 25px; margin: 10px; border: none; background: #ffe066; border-radius: 8px; font-size: 18px; cursor: pointer;">😊 Happy</button>
+
+  <button onclick="setMood('😔', '#9bb1ff', 'It’s okay to feel sad sometimes. Take care 💙')" style="padding: 15px 25px; margin: 10px; border: none; background: #9bb1ff; border-radius: 8px; font-size: 18px; cursor: pointer;">😔 Sad</button>
+
+  <button onclick="setMood('😡', '#ff6b6b', 'Take a deep breath. Anger fades away ❤️')" style="padding: 15px 25px; margin: 10px; border: none; background: #ff6b6b; border-radius: 8px; font-size: 18px; cursor: pointer;">😡 Angry</button>
+
+  <button onclick="setMood('😴', '#a3d9a5', 'Rest is important. Recharge yourself 🌙')" style="padding: 15px 25px; margin: 10px; border: none; background: #a3d9a5; border-radius: 8px; font-size: 18px; cursor: pointer;">😴 Tired</button>
+
+  <!-- Mood Display -->
+  <div id="moodBox" style="margin: 40px auto; padding: 40px; width: 60%; background: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); font-size: 24px; font-weight: bold;">
+    Select your mood to see a message 🌟
+  </div>
+
+  <!-- Script -->
+  <script>
+    function setMood(emoji, color, message) {
+      const box = document.getElementById("moodBox");
+      box.innerHTML = emoji + " " + message;
+      box.style.background = color;
+    }
+  </script>
+
+</body>
+</html>
